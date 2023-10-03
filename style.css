@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;700&family=Open+Sans:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    z-index: 99;
+    width: 100%;
+    font-size: 1.3em;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    background-color: black;
+}
+
+header img{
+    height: 30px;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;     
+}
+
+li{
+    padding: 1em;
+}
+
+header li:hover, #selected{   
+    transition: transform 1s;
+    border-bottom: 1px solid white;
+}
+
+.menu-icon{
+    display: none;
+}
+
+
+
+/* tentativa falha da border transtition
+li::before, li::after {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform-origin: center;
+}
+
+li::before {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: scale3d(0,1,1);
+}
+
+li::after {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    transform: scale3d(1,0,1);
+}
+
+li:hover::before, li:hover::after {
+  transform: scale3d(1,1,1);
+  transition: transform 0.5s;
+}*/ 
+
+a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+body, html{
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+#home{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    display: flex;
+    font-weight: bold;
+    font-size: 5em;
+    width: 50%;
+    justify-content: right;
+    align-items: center;
+    padding-right: 0.2em;
+}
+
+.descricao{
+    font-size: 3em;
+    width: 50%;
+    padding-left: 0.2em;
+    font-weight: bold;
+}
+footer{
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+footer svg{
+    fill: white;
+    font-size: 2em;
+    margin-right: 0.3em;
+}
+
+/* sobre */
+.sectionSobre, .sectionMandato{
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+#sobre{
+    top: 0;
+}
+
+#sobre, #wpp, #mandato, #dashboard1{
+    background-color: rgb(29, 29, 29);
+}
+
+.textoSobre{
+    padding: 1em;
+    width: 40%;
+    text-align: justify;
+}
+
+.textoSobre h1{
+    margin-bottom: 1em;
+}
+
+.sobreImg{
+    width: auto;
+}
+
+.sobreImg img{
+    height: 400px;
+}
+
+/* beneficios */
+
+.sectionSobre ul{
+    list-style-type: disc;
+    display: block;
+}
+
+#atendimento ul{
+    margin-left: 1em;
+}
+
+#tresCell{
+    width: 500px;
+}
+
+/* Dashboards */
+#dashboard1 svg{
+    fill: #38b6ff;
+    margin-right: 1em;
+}
+
+h3{
+    display: inline-block;
+}
+
+.bdListItem{
+    margin-bottom: 1em;
+}
+
+.textoSobreImg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+.sobreImg2{
+    display: flex;
+    justify-content: end;
+}
+
+.textoSobreImg img, .sobreImg2 img{
+    width: 60%;
+}
+
+.textoSobreImg ul{
+    width: 60%;
+}
+
+/* 38b6ff */
+
+@media screen and (max-width:1366px){
+    html{
+        font-size: 0.75rem;
+    }
+
+    header{
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (max-height: 980px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    .menu-icon{
+        display: block;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .navbar ul{
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        margin-top: 1em;
+    }
+
+    header{
+        padding: 1em;
+    }
+
+    .navbar li{
+        padding: 1em;
+        background-color: black;
+    }
+}
+
+
+
+@media screen and (max-width: 768px){
+    .sectionSobre{
+        flex-direction: column;
+    }
+
+    #multicanais, #atendimento, #engajamento{
+        flex-direction: column-reverse;
+    }
+
+    .textoSobre{
+        width: 80%;
+    }
+
+    #dashboard1 img{
+        width: 300px;
+        height: auto;
+    }
+
+    .sobreImg2{
+        display: none;
+    }
+
+    .textoSobreImg{
+        width: 85%;
+    }
+
+    .textoSobreImg ul{
+        width: 100%;
+    }
+
+    .textoSobreImg li{
+        padding: 0.5em;
+    }
+
+    .textoSobreImg img{
+        width: 500px;
+        margin-bottom: 1.5em;
+    }
+}
+
+@media screen and (max-width:650px){
+    #hero{
+        flex-direction: column;
+    }
+
+    html{
+        font-size: 0.50rem;
+    }
+
+    .logo{
+        width: 100%;
+        justify-content: center;
+        padding-right: none;
+    }
+
+    .descricao{
+        width: 100%;
+        text-align: center;
+        padding-left: none;
+    }
+
+    .sobreImg img{
+        height: 350px;
+    }
+
+    #tresCell{
+        width: 300px;
+    }
+
+    #dashboard1 img{
+        width: 300px;
+        height: auto;
+    }
+
+    .sobreImg2{
+        display: none;
+    }
+
+    .textoSobreImg{
+        width: 85%;
+    }
+
+    .textoSobreImg ul{
+        width: 100%;
+    }
+
+    .textoSobreImg li{
+        padding: 0.5em;
+    }
+
+    .textoSobreImg img{
+        width: 300px;
+        margin-bottom: 1.5em;
+    }
+
+    #engajamento img{
+        width: 300px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .logo{
+        font-size: 3em;
+    }
+
+    .descricao{
+        font-size: 1.5em;
+    }
+}

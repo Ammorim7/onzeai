@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;700&family=Open+Sans:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    font-size: 1.3em;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+header img{
+    height: 30px;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;     
+}
+
+li{
+    padding: 1em;
+}
+
+li:hover{   
+    transition: transform 1s;
+    border-bottom: 1px solid white;
+}
+.menu-icon{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-icon{
+        display: block;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .navbar ul{
+        flex-direction: column;
+        position: absolute;
+        margin-top: 1em;
+        right: 0;
+        background-color: black;
+    }
+
+    header{
+        padding: 1em;
+    }
+
+    .navbar li{
+        padding: 1em;
+    }
+}
+
+/* tentativa falha da border transtition
+li::before, li::after {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform-origin: center;
+}
+
+li::before {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: scale3d(0,1,1);
+}
+
+li::after {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    transform: scale3d(1,0,1);
+}
+
+li:hover::before, li:hover::after {
+  transform: scale3d(1,1,1);
+  transition: transform 0.5s;
+}*/ 
+
+a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+body, html{
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+#home{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    display: flex;
+    font-weight: bold;
+    font-size: 5em;
+    width: 50%;
+    justify-content: right;
+    align-items: center;
+    padding-right: 0.2em;
+}
+
+.descricao{
+    font-size: 3em;
+    width: 50%;
+    padding-left: 0.2em;
+    font-weight: bold;
+}
+footer{
+    padding: 0.5em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+footer svg{
+    fill: white;
+    font-size: 2em;
+    margin-right: 0.3em;
+}
+
+@media screen and (max-width:640px){
+    #hero{
+        flex-direction: column;
+    }
+
+    .logo{
+        width: 100%;
+        justify-content: center;
+        padding-right: none;
+    }
+
+    .descricao{
+        width: 100%;
+        text-align: center;
+        padding-left: none;
+    }
+}
+
+
+
+@media screen and (max-width: 375px){
+    .logo{
+        font-size: 3em;
+    }
+
+    .descricao{
+        font-size: 1.5em;
+    }
+}
