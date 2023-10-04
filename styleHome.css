@@ -16,6 +16,7 @@ header{
 
 header img{
     height: 30px;
+    margin-left: 1em;
 }
 
 ul{
@@ -54,6 +55,10 @@ li:hover{
 
     header{
         padding: 1em;
+    }
+
+    header img{
+        margin-left: 0em;
     }
 
     .navbar li{
