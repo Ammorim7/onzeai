@@ -210,6 +210,19 @@ h3{
     width: 60%;
 }
 
+/* Animacoes */
+.esconder{
+    opacity: 0;
+    transition: all 1s;
+    transform: translate(-100%);
+}
+
+.mostrar{
+    opacity: 1;
+    transition: all 1s;
+    transform: translateX(0);
+}
+
 /* 38b6ff */
 
 @media screen and (max-width:1366px){
